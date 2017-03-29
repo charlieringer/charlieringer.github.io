@@ -6,25 +6,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 	<link href="style/extra.css" rel="stylesheet">
+
+	 <script src="js/jquery.min.js"></script>
+  	<script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
 	<nav class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container" style = "padding-top: 1em;padding-bottom: 1em">
-			<h1 style = "display:inline;;color:#FFFFFF">Charlie Ringer</h1>
-			<ul class="nav navbar-nav" style = "float:right;" > 
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About me</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="cv.html">Curriculum Vitae</a></li>
-			</ul>
-		</div>
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar" style = "padding-top: 1em;padding-bottom: 1em">
+	    	<div class="container">
+		        <h1 style = "display:inline;;color:#FFFFFF">Charlie Ringer</h1>
+		      	<ul class="nav navbar-nav" style = "float:right;" >
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about.html">About me</a></li>
+					<li><a href="projects.html">Projects</a></li>
+					<li><a href="cv.html">Curriculum Vitae</a></li>
+		      </ul>
+		     </div>
+	    </div>
+	  </div>
 	</nav>
 	
 	<div class="container">
 		<h1>About me:</h1>
 		<div id="paragraph1">
-			<img src="images/profile.jpg" class="img-rounded" alt="Profile image of me." style="float:right;width:400px;height:400px;">
+			<img src="images/profile.jpg" class="img-rounded" alt="Profile image of me." style="float:right;width:35%;">
 			<h2>Who am I?</h2>
 
 			<p>Born and raised on the sunny Isle of Wight (a small island off the south coast of England) I am a 26 year old final year computer science undergraduate student at Goldsmiths College, University of London. Next year I will be starting my PhD at Goldsmiths as part of the <a href="http://www.iggi.org.uk" style="color: purple;">IGGI programme</a>.
