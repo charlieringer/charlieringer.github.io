@@ -32,8 +32,18 @@ code {
 }
 
 body { 
+  background:#F5F5F5;
   color:#515F6F !important;} /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
 
 h1 {
   color: #800080;
+}
+
+#homeimg1,#homeimg2,#homeimg3 {
+  width:75%; 
+  border: 10px solid #222;
+}
+
+#homeimg1:hover,#homeimg2:hover,#homeimg3:hover { 
+    width:80%;
 }
