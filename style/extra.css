@@ -47,3 +47,21 @@ h1
 	width:60%;
 	border:0px solid #222
 }
+
+@media screen and (min-width: 0px) and (max-width: 775px) {
+  #hide_if_mobile { display: none; }    
+}
+
+@media screen and (min-width: 0px) and (max-width: 775px) {
+  #show_if_mobile { display: block; }   
+}
+
+@media screen and (min-width: 776px) {
+  #hide_if_mobile { display: block; }
+}
+
+@media screen and (min-width: 776px) {
+  #show_if_mobile { display: none; }
+}
+
+ 
