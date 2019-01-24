@@ -76,3 +76,7 @@ h1
 
 .icons { color: #fff }
 
+.icons:hover {
+    color: purple;
+}
+
