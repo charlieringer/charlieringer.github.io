@@ -76,6 +76,9 @@ h1
 
 .icons { color: #fff }
 
+.icons:visited {
+    color: #fff;
+}
 .icons:hover {
     color: purple;
 }
