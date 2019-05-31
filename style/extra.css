@@ -74,6 +74,15 @@ h1
   #show_if_mobile { display: none; }
 }
 
+@media screen and (min-width: 0px) and (max-width: 1500px) {
+  #hide_if_medium { display: none; }   
+}
+@media screen and (min-width: 1500px) {
+  #hide_if_medium { display: block; }   
+}
+
+
+
 .icons { color: #fff }
 
 .icons:visited {
@@ -83,3 +92,44 @@ h1
     color: purple;
 }
 
+.navbar-fixed-top{
+	padding: 0.5em;
+}
+
+.title{
+	text-decoration : none; 
+	font-size: 1.75em; 
+	color: #F5F5F5;
+}
+
+.navbar-nav{
+	float:right;
+}
+
+.container{
+	width: 80%;
+}
+.index_container{
+	width: 50%;
+}
+
+a{
+	color: purple;
+}
+
+.profile_picture{
+	float:right;
+	width:20%;
+	margin-left: 2em;
+}
+
+.justify{
+	text-align: justify;
+}
+
+.profile_picture_mobile{
+	width:70%; 
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
