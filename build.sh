@@ -22,4 +22,4 @@ do
 done
 
 #build the blog
-cat src/header.html src/blog.html src/blog_html/*.html src/footer.html > blog.html
+cat src/header.html src/blog.html src/blog_html/*.html src/blog_footer.html src/footer.html > blog.html
