@@ -17,10 +17,15 @@ do
 
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
-	echo "Processing $filename"
-	echo $title
-
+	#Turn the markdown into html
 	pandoc $f > src/blog_html/$filename.html
 done
 
-cat src/header.html src/blog.html src/footer.html > blog.html
+#build the blog
+#cat src/header.html src/blog.html > blog.html
+#for f in src/blog_html/*.html
+#do
+#	cat blog.html $f > blog.html
+#	echo "Processing $f"
+#done
+cat src/header.html src/blog.html src/blog_html/*.html src/footer.html > blog.html
