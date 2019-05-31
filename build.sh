@@ -22,10 +22,4 @@ do
 done
 
 #build the blog
-#cat src/header.html src/blog.html > blog.html
-#for f in src/blog_html/*.html
-#do
-#	cat blog.html $f > blog.html
-#	echo "Processing $f"
-#done
 cat src/header.html src/blog.html src/blog_html/*.html src/footer.html > blog.html

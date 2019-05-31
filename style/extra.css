@@ -110,7 +110,9 @@ h1
 	width: 80%;
 }
 .index_container{
-	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
 }
 
 a{
@@ -132,4 +134,4 @@ a{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	}
+}
