@@ -13,16 +13,22 @@ prefix="src/blogs/"
 # Start buiilding the landing page
 cat src/header.html src/blog_landing.html > blog.html
 
-#Go through each blog
+#Go through each blog (backwards)
 for f in $(ls -1 src/blogs/*.md | sort -r) 
 do
 	#Get the file name
 	filename=${f#"$prefix"}
 	filename=${filename%"$suffix"}
-	finaldest=blogs/$filename.html
+	#Get the data substring
+	date=${filename:4:10}
+
+	blog_url=${filename%"$suffix"}
+	finaldest=blogs/${filename:15}.html
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
-	date=${filename:4:10}
+
+	audience=`grep -m 1 "^###### .*" $f | sed s/"###### "//g`
+	
 
 	#Turn the markdown into html
 	pandoc $f > src/tmp.html
@@ -38,7 +44,7 @@ do
 	rm src/tmp.html
 
 	#And add a short linked version to the blog landing page
-	cat src/blog_short.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" | sed "s#{{DATE}}#$date#g" |  sed "s#{{SAMPLE_BODY}}#$sample#g" >> blog.html
+	cat src/blog_short.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" | sed "s#{{DATE}}#$date#g" | sed "s#{{AUDIENCE}}#$audience#g" |  sed "s#{{SAMPLE_BODY}}#$sample#g" >> blog.html
 
 done
 
