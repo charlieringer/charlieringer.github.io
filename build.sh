@@ -20,14 +20,14 @@ do
 	finaldest=blogs/$filename.html
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
+	date=${filename:0:10}
 	#Turn the markdown into html
 	pandoc $f > src/blog_html/$filename.html
 	#And save it to as the finished file
 	cat src/header.html src/blog_html/$filename.html src/blog_footer.html > $finaldest
 
-
 	#And add it to the blog page
-	cat src/blog_template.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" >> blog.html
+	cat src/blog_template.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" | sed "s#{{DATE}}#$date#g" |  sed "s#{{SAMPLE_BODY}}#$finaldest#g" >> blog.html
 
 done
 

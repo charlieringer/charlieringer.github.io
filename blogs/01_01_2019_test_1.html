@@ -31,18 +31,21 @@
 	    </div>
 	  </div>
 	</nav>
-	<div class="container"><h1>Blog:</h1><a href=blogs/01-01-2019_test_1.html><h3>Multimodal Joint Emotion and Game Context Recognition in League of Legends Livestreams</h3></a>
-<h6><i>01-01-2019</i></h6>
-<p>blogs/01-01-2019_test_1.html
-<br>
-<a href=blogs/05-08-2018_test_3.html><h3>Blog the third</h3></a>
-<h6><i>05-08-2018</i></h6>
-<p>blogs/05-08-2018_test_3.html
-<br>
-<a href=blogs/27-05-2018_test_2.html><h3>2 Blog</h3></a>
-<h6><i>27-05-2018</i></h6>
-<p>blogs/27-05-2018_test_2.html
-<br>
+	<div class="container"><h1 id="multimodal-joint-emotion-and-game-context-recognition-in-league-of-legends-livestreams">Multimodal Joint Emotion and Game Context Recognition in League of Legends Livestreams</h1>
+<p>This repository contains the code to support the paper “Multimodal Joint Emotion and Game Context Recognition in League of Legends Livestreams” presented at the 2019 IEEE Conference on Games.</p>
+<h2 id="data">Data</h2>
+<p>The assositated dataset can be downloaded from:</p>
+<p>Copy all files/folders found there into this directory</p>
+<h2 id="usage">Usage</h2>
+<ul>
+<li>The data set needs to be convered into npy files first. This can be done with <code>utils/process_data_set.py</code>.</li>
+<li>(optional) To apply the oversampling technique detailed in the paper run <code>augment_annotations.py</code> from the utils folder.</li>
+<li>Once these preprocessing steps are complete <code>trainer.py</code> will run the full set of expeirments.</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<p>Requirements can be found on <code>requirements.txt</code>.</p>
+<h2 id="cite-this-work">Cite this work</h2>
+<p>Please cite this work as: <code>Ringer, Charles, Walker, James Alfred, Nicolaou, Mihalis A. (2019) Multimodal Joint Emotion and Game Context Recognition in League of Legends Livestreams, In: Proceedings of the IEEE Confernce on Games 2019. IEEE</code></p>
 </div>
 	<footer class="footer">
 	    <div class="container">
@@ -64,8 +67,8 @@
 	</footer>
 </body>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-	<link href="style/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="style/extra.css" rel="stylesheet">
-	<script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<link href="../style/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="../style/extra.css" rel="stylesheet">
+	<script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </html>
