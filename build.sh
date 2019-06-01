@@ -9,17 +9,26 @@ cat src/header.html src/cv.html src/footer.html > cv.html
 shopt -s nullglob
 suffix=".md"
 prefix="src/blogs/"
+
+cat src/header.html src/blog.html > blog.html
+
 for f in src/blogs/*.md
 do
-	#Get the file name (question: Do I need this?)
+	#Get the file name
 	filename=${f#"$prefix"}
 	filename=${filename%"$suffix"}
-
+	finaldest=blogs/$filename.html
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
 	#Turn the markdown into html
 	pandoc $f > src/blog_html/$filename.html
+	#And save it to as the finished file
+	cat src/header.html src/blog_html/$filename.html src/blog_footer.html > $finaldest
+
+
+	#And add it to the blog page
+	cat src/blog_template.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" >> blog.html
+
 done
 
-#build the blog
-cat src/header.html src/blog.html src/blog_html/*.html src/blog_footer.html src/footer.html > blog.html
+cat src/footer.html >> blog.html
