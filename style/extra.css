@@ -117,8 +117,8 @@ a{
 
 .profile_picture{
 	float:right;
-	width:30%;
-	min-width: 180px;
+	width:20%;
+	min-width: 150px;
 	margin-left: 2em;
 }
 
@@ -127,8 +127,8 @@ a{
 }
 
 .profile_picture_mobile{
-	width:30%; 
-	min-width: 180px;
+	width:20%; 
+	min-width: 150px;
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
