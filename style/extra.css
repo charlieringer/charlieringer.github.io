@@ -138,4 +138,4 @@ figcaption{
 }
 
 figure { width: 100%; text-align: center; margin: 1em 0 1em 0; }
-figure>img { max-width: 750px; text-align: center; margin: 1em 0 1em 0; }
+figure>img { max-width: 750px; width: 100%; text-align: center; margin: 1em 0 1em 0; }
