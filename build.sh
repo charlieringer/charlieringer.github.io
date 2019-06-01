@@ -14,7 +14,7 @@ prefix="src/blogs/"
 cat src/header.html src/blog_landing.html > blog.html
 
 #Go through each blog
-for f in src/blogs/*.md
+for f in $(ls -1 src/blogs/*.md | sort -r) 
 do
 	#Get the file name
 	filename=${f#"$prefix"}
@@ -22,13 +22,13 @@ do
 	finaldest=blogs/$filename.html
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
-	date=${filename:0:10}
+	date=${filename:4:10}
 
 	#Turn the markdown into html
 	pandoc $f > src/tmp.html
 
 	#And save it to as the finished file
-	cat src/header.html src/tmp.html src/blog_footer.html > $finaldest
+	cat src/post_header.html src/tmp.html src/post_footer.html > $finaldest
 
 	#Get some sample content (400 chars)
 	sample=`grep -o '<p>.*</p>' src/tmp.html` 
