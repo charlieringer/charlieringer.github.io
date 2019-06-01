@@ -74,10 +74,10 @@ h1
   #show_if_mobile { display: none; }
 }
 
-@media screen and (min-width: 0px) and (max-width: 1500px) {
+@media screen and (min-width: 0px) and (max-width: 1600px) {
   #hide_if_medium { display: none; }   
 }
-@media screen and (min-width: 1500px) {
+@media screen and (min-width: 1600px) {
   #hide_if_medium { display: block; }   
 }
 

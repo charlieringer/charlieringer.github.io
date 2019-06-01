@@ -23,7 +23,7 @@ do
 	#Get the title (for index building purposes)
 	title=`grep -m 1 "^# .*" $f | sed s/"# "//g`
 	date=${filename:0:10}
-	
+
 	#Turn the markdown into html
 	pandoc $f > src/tmp.html
 
@@ -42,4 +42,5 @@ do
 
 done
 
+# Finish buiilding the landing page
 cat src/footer.html >> blog.html
