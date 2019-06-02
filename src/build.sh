@@ -1,20 +1,20 @@
 #!/bin/bash
 
 # Build all of the plain static html pages (everything except the blog)
-cat src/header.html src/index.html src/footer.html > index.html
-cat src/header.html src/publications.html src/footer.html > publications.html
-cat src/header.html src/cv.html src/footer.html > cv.html
+cat header.html index.html footer.html > ../index.html
+cat header.html publications.html footer.html > ../publications.html
+cat header.html cv.html footer.html > ../cv.html
 
 # Process blog posts.
 shopt -s nullglob
 suffix=".md"
-prefix="src/blogs/"
+prefix="blogs/"
 
 # Start buiilding the landing page
-cat src/header.html src/blog_landing.html > blog.html
+cat header.html blog_landing.html > ../blog.html
 
 #Go through each blog (backwards)
-for f in $(ls -1 src/blogs/*.md | sort -r) 
+for f in $(ls -1 blogs/*.md | sort -r) 
 do
 	#Get the file name
 	filename=${f#"$prefix"}
@@ -31,22 +31,22 @@ do
 	
 
 	#Turn the markdown into html
-	pandoc $f > src/tmp.html
+	pandoc $f > tmp.html
 
 	#And save it to as the finished file
-	cat src/post_header.html src/tmp.html src/post_footer.html > $finaldest
+	cat post_header.html tmp.html post_footer.html > ../$finaldest
 
 	#Get some sample content (400 chars)
-	sample=`grep -o '<p>.*</p>' src/tmp.html` 
-	sample=${sample:0:400}
+	sample=`grep -o '<p>.*</p>' tmp.html` 
+	sample=${sample:0:600}
 
 	#Remove temp file
-	rm src/tmp.html
+	rm tmp.html
 
 	#And add a short linked version to the blog landing page
-	cat src/blog_short.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" | sed "s#{{DATE}}#$date#g" | sed "s#{{AUDIENCE}}#$audience#g" |  sed "s#{{SAMPLE_BODY}}#$sample#g" >> blog.html
+	cat blog_short.html | sed "s#{{FILE}}#$finaldest#g" | sed "s#{{TITLE}}#$title#g" | sed "s#{{DATE}}#$date#g" | sed "s#{{AUDIENCE}}#$audience#g" |  sed "s#{{SAMPLE_BODY}}#$sample#g" >> ../blog.html
 
 done
 
 # Finish buiilding the landing page
-cat src/footer.html >> blog.html
+cat footer.html >> ../blog.html

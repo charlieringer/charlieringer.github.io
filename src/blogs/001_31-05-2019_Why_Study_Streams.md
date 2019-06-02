@@ -1,5 +1,5 @@
 # Why Study Video Game Livestreams?
-###### Topics: Machine Learning, Data Gathering. Audience: Intermediate+. 
+###### Topics: Machine Learning, Data Gathering. Audience: Knowledgeable. 
 Seeing as I have built this blogging platform on my website it seems only fitting to fill it. That said, I don't plan to blog often and if my previous blogs are anything to go by this will be blog 1 of 2, but I digress. My research is into modelling video game lives streams, e.g. [Twitch.tv](https://twitch.tv/ "Twitch.tv"). For those of you to who Livestreaming is a new term let me briefly explain. Livestreaming describes a paradigm where the events being broadcast are occurring live (as in live TV) and accessible through the internet. In the video game livestreams world a particular layout is common, where the broadcaster (streamer) broadcasts their game screen with an overlay of their webcam. Streamers then play their game while providing commentary to the viewers. Viewers then interact with the streamer (and other viewers) by posting messages in an open chat, where the streamer can read and respond to the messages.
 
 ![A streamer (P4wnyhof) playing Player Unknown's Battlegrounds](../images/blog_001/streamer.png)
