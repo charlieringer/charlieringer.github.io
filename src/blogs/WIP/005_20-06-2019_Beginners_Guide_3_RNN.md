@@ -1,9 +1,0 @@
-# Recurrent Nightmares, an intro to Temporal Modelling with RNNs - A Beginner's Guide to Deep Learning Part 3
-###### Topics: Machine Learning, Temporal Modelling. Audience: Beginner. 
-This is an intro section. It must be at least 600 characters long and cannot contain line breaks. That is a long paragraph so the rest of this is placeholder. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar dignissim leo sed consectetur. Morbi tempor, dui vitae facilisis lacinia, purus dui tempor risus, quis fringilla mauris odio quis diam. Aliquam venenatis et tellus in eleifend. Aenean at tempus diam, quis fermentum nulla. Pellentesque eleifend felis mauris, non tempor tellus ullamcorper sit amet. In blandit gravida ultricies. Mauris vel vehicula leo, quis hendrerit purus. Morbi et libero ligula. Ut suscipit lorem ex, in scelerisque ligula dignissim sit amet. Etiam vulputate urna vitae nulla lobortis dignissim vel ut quam. Praesent libero massa, tempus ac pellentesque eget, malesuada quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-
-![An Image](../images/blog_numb/image.png)
-
-## Use this as section heading size
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pulvinar dignissim leo sed consectetur. Morbi tempor, dui vitae facilisis lacinia, purus dui tempor risus, quis fringilla mauris odio quis diam. Aliquam venenatis et tellus in eleifend. Aenean at tempus diam, quis fermentum nulla. Pellentesque eleifend felis mauris, non tempor tellus ullamcorper sit amet. In blandit gravida ultricies. Mauris vel vehicula leo, quis hendrerit purus. Morbi et libero ligula. Ut suscipit lorem ex, in scelerisque ligula dignissim sit amet. Etiam vulputate urna vitae nulla lobortis dignissim vel ut quam. Praesent libero massa, tempus ac pellentesque eget, malesuada quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-
