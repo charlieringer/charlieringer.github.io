@@ -1,5 +1,3 @@
 User-agent: * 
-Disallow: /blog.html
-Disallow: blogs/
-Disallow: cv/
+Disallow:
 Sitemap: https://charlieringer.com/sitemap.txt
