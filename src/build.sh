@@ -34,7 +34,7 @@ do
 	pandoc $f > tmp.html
 
 	#And save it to as the finished file
-	cat post_header.html tmp.html post_footer.html > ../$finaldest
+	cat post_header.html tmp.html footer.html > ../$finaldest
 
 	#Get some sample content (400 chars)
 	sample=`grep -o '<p>.*</p>' tmp.html` 
